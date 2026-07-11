@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Resume of Mohith Pukale - Principal Systems & Cloud Security Engineer">
+  <title>Resume | Mohith Pukale</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700|Fira+Code:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-base: #f8fafc;
+      --bg-card: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --text-dark: #0f172a;
+      --primary: #0d9488;
+      --primary-hover: #0f766e;
+      --border-color: #e2e8f0;
+      
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      line-height: 1.5;
+      padding: 2.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Print Controls Banner */
+    .controls-banner {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.15s ease;
+    }
+    .btn:hover {
+      background-color: var(--primary-hover);
+    }
+    .btn-outline {
+      background-color: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+    .btn-outline:hover {
+      background-color: var(--bg-base);
+    }
+
+    /* Resume Page Container */
+    .resume-page {
+      background: var(--bg-card);
+      width: 100%;
+      max-width: 800px;
+      min-height: 1030px; /* Standard Letter ratio */
+      padding: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header styling */
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .header-left h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: 0.25rem;
+    }
+
+    .header-left .title {
+      font-size: 1.1rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .header-right a {
+      color: var(--text-main);
+      text-decoration: none;
+    }
+    .header-right a:hover {
+      color: var(--primary);
+    }
+    .header-right i {
+      width: 16px;
+      color: var(--primary);
+    }
+
+    /* Content Layout */
+    .resume-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2.2rem;
+      flex-grow: 1;
+    }
+
+    /* Column Styles */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .main-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Sections styling */
+    section h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text-dark);
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    section h2 i {
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    /* Timeline Items */
+    .job {
+      margin-bottom: 1.25rem;
+    }
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.2rem;
+    }
+
+    .job-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .job ul {
+      list-style-type: none;
+    }
+
+    .job li {
+      font-size: 0.82rem;
+      color: var(--text-main);
+      position: relative;
+      padding-left: 0.9rem;
+      margin-bottom: 0.35rem;
+      line-height: 1.4;
+    }
+
+    .job li::before {
+      content: "•";
+      color: var(--primary);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Sidebar Blocks */
+    .skills-group {
+      margin-bottom: 0.75rem;
+    }
+    .skills-group:last-child {
+      margin-bottom: 0;
+    }
+    .skills-group h3 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.25rem;
+    }
+    .skills-group p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .project-item {
+      margin-bottom: 0.8rem;
+    }
+    .project-item:last-child {
+      margin-bottom: 0;
+    }
+    .project-item h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.15rem;
+    }
+    .project-item p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    .edu-item {
+      margin-bottom: 0.8rem;
+    }
+    .edu-item:last-child {
+      margin-bottom: 0;
+    }
+    .edu-item h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .edu-item .degree {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--primary);
+    }
+    .edu-item .meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.1rem;
+    }
+
+    /* Print Styling overrides */
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+        display: block;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .resume-page {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+        min-height: auto;
+      }
+      @page {
+        size: letter;
+        margin: 0.5in;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Non-printed Control Banner -->
+  <div class="controls-banner no-print">
+    <div>
+      <a href="index.html" class="btn btn-outline"><i class="fa fa-arrow-left"></i> Portfolio Home</a>
+    </div>
+    <div style="display: flex; gap: 0.8rem;">
+      <button onclick="window.print()" class="btn"><i class="fa fa-print"></i> Print / Save PDF</button>
+    </div>
+  </div>
+
+  <!-- The Resume Page -->
+  <div class="resume-page">
+    <header>
+      <div class="header-left">
+        <h1>Mohith Pukale</h1>
+        <div class="title">Principal Systems &amp; Cloud Security Engineer</div>
+      </div>
+      <div class="header-right">
+        <div><i class="fa-solid fa-envelope"></i> <a href="mailto:mohithpukale@gmail.com">mohithpukale@gmail.com</a></div>
+        <div><i class="fa-solid fa-globe"></i> <a href="https://mohithpukale.com">mohithpukale.com</a></div>
+        <div><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/mohith-pukale">linkedin.com/in/mohith-pukale</a></div>
+        <div><i class="fa-brands fa-github"></i> <a href="https://github.com/mohithpukale">github.com/mohithpukale</a></div>
+        <div><i class="fa-solid fa-location-dot"></i> Seattle, WA</div>
+      </div>
+    </header>
+
+    <div class="resume-content">
+      <!-- Left sidebar: Skills, Projects, Education -->
+      <aside class="sidebar">
+        
+        <section>
+          <h2><i class="fa-solid fa-list-check"></i> Skills</h2>
+          <div class="skills-group">
+            <h3>Languages</h3>
+            <p>Java, Python, C, Go, Ruby, SQL</p>
+          </div>
+          <div class="skills-group">
+            <h3>Security &amp; Cloud</h3>
+            <p>Access Control (AuthZ), Identity Management (IAM), Identity Providers, YubiKeys, AWS Cloud, OCI, Terraform</p>
+          </div>
+          <div class="skills-group">
+            <h3>Data Platforms</h3>
+            <p>MySQL, MongoDB, Elasticsearch, Solr, Hadoop Big Data, Apache Pig</p>
+          </div>
+        </section>
+
+        <section>
+          <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+          <div class="edu-item">
+            <h3>UC Santa Barbara</h3>
+            <div class="degree">M.S. Computer Science</div>
+            <div class="meta">
+              <span>Sept 2017 – June 2019</span>
+              <span>GPA: 3.49</span>
+            </div>
+          </div>
+          <div class="edu-item">
+            <h3>PES Institute of Tech</h3>
+            <div class="degree">B.E. Information Science</div>
+            <div class="meta">
+              <span>Sept 2011 – June 2015</span>
+              <span>GPA: 9.25 / 10</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
+          <div class="project-item">
+            <h3>Oblivious Data Storage (2018)</h3>
+            <p>Implemented ORAM algorithms inside fault-tolerant distributed storage systems to hide query pattern signatures from host hypervisors.</p>
+          </div>
+          <div class="project-item">
+            <h3>Ramsey Search (2018)</h3>
+            <p>Developed a distributed search and optimization framework in Go. Deployed Master-Slave topologies to solve graph calculations.</p>
+          </div>
+          <div class="project-item">
+            <h3>Secure Chat (2015)</h3>
+            <p>Built a cross-platform messaging application implementing layered End-to-End Encryption (E2EE) using RSA, AES, and PBKDF2.</p>
+          </div>
+        </section>
+
+      </aside>
+
+      <!-- Right main col: Experience -->
+      <main class="main-col">
+        <section>
+          <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+
+          <!-- Oracle II / Principal -->
+          <div class="job">
+            <div class="job-header">
+              <span>Software Engineer II (Access Control)</span>
+              <span>Seattle, WA</span>
+            </div>
+            <div class="job-meta">
+              <span>Oracle Cloud Infrastructure (OCI)</span>
+              <span>Aug 2021 – Present</span>
+            </div>
+            <ul>
+              <li>Designed and engineered modern authorization pipelines, enabling secure, isolated consumption of core internal cloud APIs by external client services.</li>
+              <li>Co-architected an automated recurring resource review validation service, collaborating across Identity Provider, Console, and Core UI product teams.</li>
+              <li>Automated regional service expansion deployments, reducing new cloud availability zone boot times from 7 days down to 3 hours.</li>
+              <li>Designed and implemented hardware token integration, retrofitting yubikeys to support key identity translation shifts.</li>
+            </ul>
+          </div>
+
+          <!-- Oracle I -->
+          <div class="job">
+            <div class="job-header">
+              <span>Software Engineer (Access Control)</span>
+              <span>Seattle, WA</span>
+            </div>
+            <div class="job-meta">
+              <span>Oracle Cloud Infrastructure (OCI)</span>
+              <span>Aug 2019 – Jul 2021</span>
+            </div>
+            <ul>
+              <li>Developed a custom, high-speed Terraform provider to allow cloud tenants to configure and manage resource-level authorization models programmatically.</li>
+              <li>Co-designed and implemented access policy enforcement frameworks tailored specifically for isolated air-gapped government cloud zones.</li>
+              <li>Built provisioning and programming binaries to flash hardware keys on-site.</li>
+            </ul>
+          </div>
+
+          <!-- Amazon -->
+          <div class="job">
+            <div class="job-header">
+              <span>Software Engineer</span>
+              <span>Bangalore, India</span>
+            </div>
+            <div class="job-meta">
+              <span>Amazon</span>
+              <span>Aug 2015 – Aug 2017</span>
+            </div>
+            <ul>
+              <li>Re-engineered core database schemas and service telemetry inside the Analytics Platform, yielding a 25% query latency improvement.</li>
+              <li>Minimized operational on-call overhead by 15% by refactoring monolithic storage access points into isolated, federated microservices.</li>
+              <li>Designed recovery systems and alerts to monitor delays in massive analytical Map-Reduce processes.</li>
+            </ul>
+          </div>
+
+          <!-- Amazon Intern -->
+          <div class="job">
+            <div class="job-header">
+              <span>Software Engineer Intern</span>
+              <span>Bangalore, India</span>
+            </div>
+            <div class="job-meta">
+              <span>Amazon</span>
+              <span>Jan 2015 – Jul 2015</span>
+            </div>
+            <ul>
+              <li>Engineered interactive dashboard visualization views supporting customer segmentation analytics graphs.</li>
+              <li>Developed big data compute routines utilizing Apache Pig scripts to schedule regular scores reporting.</li>
+            </ul>
+          </div>
+
+          <!-- Intuit Intern -->
+          <div class="job">
+            <div class="job-header">
+              <span>Software Engineer Intern</span>
+              <span>Bangalore, India</span>
+            </div>
+            <div class="job-meta">
+              <span>Intuit</span>
+              <span>Jun 2014 – Aug 2014</span>
+            </div>
+            <ul>
+              <li>Created a database anonymizer utility for sanitizing sensitive client ledger data prior to QA consumption.</li>
+              <li>Reduced request latency by 20% by moving metadata repositories from MySQL to MongoDB.</li>
+            </ul>
+          </div>
+
+        </section>
+      </main>
+    </div>
+  </div>
+
+</body>
+
+</html>

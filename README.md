@@ -2,11 +2,19 @@
 
 Personal portfolio and resume. Hand-written HTML/CSS/JS — no framework and no build step.
 
-Served by GitHub Pages from `master`, and reachable at both
-[mohithpukale.com](https://mohithpukale.com) (proxied through Cloudflare) and
-[mohithpukale.github.io](https://mohithpukale.github.io). The custom domain is not configured in the
-GitHub Pages settings — there is deliberately no `CNAME` file — so the apex domain depends on the
-Cloudflare proxy in front of it. `mohithpukale.com` is the canonical URL.
+## Hosting
+
+This repo is deployed twice, independently, both building from `master`:
+
+- **[mohithpukale.com](https://mohithpukale.com)** — Cloudflare Pages. This is the canonical URL.
+  The domain is bound under Cloudflare dashboard → Workers & Pages → Custom domains.
+- **[mohithpukale.github.io](https://mohithpukale.github.io)** — GitHub Pages. A mirror, kept alive
+  so older inbound links still resolve.
+
+One `git push` triggers both builds. GitHub Pages has no custom domain configured and there is no
+`CNAME` file, which is correct — GitHub plays no part in serving the apex domain, so adding one would
+only start a fight over it. The mirror is deduplicated for search engines by the `rel=canonical` tag
+in `index.html`, which points at `mohithpukale.com`; keep it that way if you touch the `<head>`.
 
 | Path | Purpose |
 | --- | --- |

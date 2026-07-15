@@ -3,696 +3,429 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Portfolio of Mohith Pukale - Principal Systems & Cloud Security Engineer. Specializing in distributed systems, identity management, cryptography, and high-performance cloud infrastructure.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mohith Pukale — Principal Software Engineer in Seattle, WA. Identity and access infrastructure, distributed systems, and cloud platform automation.">
   <meta name="author" content="Mohith Pukale">
-  <meta name="keywords" content="Mohith Pukale, Systems Engineer, Cloud Security, Distributed Systems, Cryptography, Oracle Cloud, Amazon, UC Santa Barbara">
 
-  <title>Mohith Pukale | Principal Systems & Cloud Security Engineer</title>
+  <title>Mohith Pukale — Principal Software Engineer</title>
 
-  <!-- Google Fonts -->
+  <link rel="canonical" href="https://mohithpukale.github.io/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234338ca'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-size='32' font-weight='bold' fill='%23fff' text-anchor='middle'%3EMP%3C/text%3E%3C/svg%3E">
+
+  <meta property="og:title" content="Mohith Pukale — Principal Software Engineer">
+  <meta property="og:description" content="Identity and access infrastructure, distributed systems, and cloud platform automation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mohithpukale.github.io/">
+  <meta property="og:image" content="https://mohithpukale.github.io/img/profile-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohith Pukale",
+    "jobTitle": "Principal Software Engineer",
+    "url": "https://mohithpukale.github.io/",
+    "image": "https://mohithpukale.github.io/img/profile-hero.jpg",
+    "email": "mailto:mohithpukale@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Seattle", "addressRegion": "WA", "addressCountry": "US" },
+    "worksFor": { "@type": "Organization", "name": "Oracle Cloud Infrastructure" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of California, Santa Barbara" },
+      { "@type": "CollegeOrUniversity", "name": "PES Institute of Technology" }
+    ],
+    "knowsAbout": ["Identity and Access Management", "Cloud Infrastructure", "Distributed Systems", "Applied Cryptography", "Infrastructure as Code"],
+    "sameAs": ["https://www.linkedin.com/in/mohith-pukale", "https://github.com/mohithpukale"]
+  }
+  </script>
+
+  <script>
+    // Applied before first paint so the theme never flashes.
+    (function () {
+      var saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.setAttribute("data-theme", saved);
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:400,500,600,700,800|Inter:300,400,500,600|Fira+Code:400,500&display=swap" rel="stylesheet">
-
-  <!-- Icons CDNs -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
-  <!-- Custom styles -->
-  <link href="css/resume.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body id="page-top">
+<body id="top">
 
-  <!-- Back to Top Button -->
-  <button id="backToTop" aria-label="Back to Top"><i class="fa fa-arrow-up"></i></button>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Sticky Navigation Header -->
-  <header>
-    <div class="container nav-container">
-      <a href="#page-top" class="logo">
-        &lt;MP<span>/</span>&gt;
-      </a>
-      
-      <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
-        <i class="fa fa-bars"></i>
-      </button>
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-bar">
+      <a href="#top" class="brand">Mohith Pukale<span class="brand-dot">.</span></a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="nav-link active">About</a></li>
-        <li><a href="#expertise" class="nav-link">Expertise</a></li>
-        <li><a href="#terminal" class="nav-link">Console</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-        <li>
-          <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Light/Dark Theme">
-            <i class="fa fa-moon" id="themeIcon"></i>
-          </button>
-        </li>
+        <li><a href="#focus">Focus</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="about" class="hero-sec">
-    <canvas id="particleCanvas"></canvas>
-    <div class="container hero-content">
-      <div class="hero-text reveal">
-        <span class="hero-title text-gradient">Principal Software Engineer</span>
-        <h1>Mohith Pukale</h1>
-        <p class="hero-desc">
-          I design and implement resilient, high-performance distributed systems and cloud infrastructure. 
-          Specializing in identity management, security enforcement protocols, cryptography, and large-scale data platforms.
-        </p>
-        <div class="hero-actions">
-          <a href="#terminal" class="btn btn-primary"><i class="fa-solid fa-terminal"></i> Try Console</a>
-          <a href="#projects" class="btn btn-secondary">Explore Projects</a>
-          <a href="resume.html" class="btn btn-secondary" target="_blank"><i class="fa-solid fa-file-invoice"></i> Resume</a>
-        </div>
-      </div>
-      
-      <div class="hero-visual reveal">
-        <div class="profile-glow-ring">
-          <div class="profile-img-container">
-            <!-- Falling back to profile.jpg or DSC00083.jpeg -->
-            <img src="img/DSC00083.jpeg" alt="Mohith Pukale Profile" onerror="this.src='img/profile.jpg'">
+  <main id="main">
+
+    <!-- ================= Hero ================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Mohith Pukale</h1>
+          <p class="hero-role">Principal Software Engineer &middot; Identity &amp; Cloud Infrastructure</p>
+
+          <p class="hero-desc">
+            I build the identity and access infrastructure that cloud regions depend on — authorization
+            services, hardware-backed authentication, and the automation that turns a manual, multi-week
+            region bring-up into a repeatable one. I care most about the unglamorous work: breaking
+            dependency cycles, replacing runbooks with code, and leaving behind systems other teams can
+            operate without me.
+          </p>
+
+          <div class="hero-actions">
+            <a href="resume.html" class="btn btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+              View Resume
+            </a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Stats Strip -->
-  <section class="stats-sec">
-    <div class="container stats-grid">
-      <div class="stat-card reveal">
-        <h3>6+</h3>
-        <p class="text-gradient">Years Industry Experience</p>
-      </div>
-      <div class="stat-card reveal">
-        <h3>2</h3>
-        <p class="text-gradient">Tech Giants (Amazon, Oracle)</p>
-      </div>
-      <div class="stat-card reveal">
-        <h3>3.9</h3>
-        <p class="text-gradient">MS in CS GPA (UC Santa Barbara)</p>
-      </div>
-      <div class="stat-card reveal">
-        <h3>E2EE</h3>
-        <p class="text-gradient">Security & Privacy Focus</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Expertise / Core Pillars -->
-  <section id="expertise">
-    <div class="container">
-      <h2 class="reveal">Technical Specializations</h2>
-      <div class="expertise-grid">
-        
-        <div class="expertise-card reveal">
-          <div class="expertise-icon"><i class="fa-solid fa-server"></i></div>
-          <h3>Distributed Systems</h3>
-          <p>Designing robust master-slave architectures, federated services, and fault-tolerant storage. Experienced in scaling backend services to handle millions of queries with minimized operational overhead.</p>
-        </div>
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <h3>Cloud Security & Auth</h3>
-          <p>Expertise in Access Management & Enforcement at Oracle Cloud. Engineering identity verification, secure credentials rotation, and hardware-bound auth mechanisms (YubiKeys).</p>
-        </div>
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon"><i class="fa-solid fa-key"></i></div>
-          <h3>Cryptography & Privacy</h3>
-          <p>Researching and implementing Paillier homomorphic cryptosystems, Oblivious RAM (ORAM) for storage privacy, garlic routing algorithms (I2P), and multi-layer encryption standardizations.</p>
-        </div>
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon"><i class="fa-solid fa-database"></i></div>
-          <h3>Data Platform Engineering</h3>
-          <p>Building high-performance platform tools for easy data access, custom caching strategies, big data aggregation pipelines (AWS, Paillier, PaaS), and automated failure recovery workflows.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Terminal Section -->
-  <section id="terminal" style="background-color: var(--bg-surface-glow);">
-    <div class="container">
-      <h2 class="reveal">Interactive Developer Console</h2>
-      <p class="reveal" style="margin-bottom: 2rem; max-width: 600px;">Explore my technical background directly via this mock shell. Click the buttons below or type commands directly into the terminal.</p>
-      
-      <div class="terminal-container reveal">
-        <div class="terminal-header">
-          <div class="terminal-buttons">
-            <span class="term-dot dot-red"></span>
-            <span class="term-dot dot-yellow"></span>
-            <span class="term-dot dot-green"></span>
-          </div>
-          <div class="terminal-title">mohith@pukale:~</div>
-          <div style="width: 50px;"></div> <!-- spacer -->
-        </div>
-        
-        <div class="terminal-tabs">
-          <div class="term-tab active" data-tab="shell">zsh</div>
-          <div class="term-tab" data-tab="details">System Info</div>
-        </div>
-        
-        <div class="terminal-body" id="terminalBody">
-          <div class="terminal-line">Welcome to Mohith's developer console. Type <span class="terminal-prompt">help</span> to view available commands.</div>
-          
-          <div id="terminalHistory"></div>
-          
-          <div class="terminal-input-row">
-            <span class="terminal-prompt">mohith@pukale:~$</span>
-            <input type="text" class="terminal-input" id="terminalInput" autofocus autocomplete="off" spellcheck="false" aria-label="Terminal Command Input">
-            <span class="terminal-cursor" id="terminalCursor"></span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="terminal-commands-list reveal">
-        <span style="color: var(--text-muted); font-size: 0.85rem; display: flex; align-items: center;">Quick Presets:</span>
-        <button class="term-btn" onclick="executeCommand('help')">help</button>
-        <button class="term-btn" onclick="executeCommand('skills')">skills</button>
-        <button class="term-btn" onclick="executeCommand('experience')">experience</button>
-        <button class="term-btn" onclick="executeCommand('projects')">projects</button>
-        <button class="term-btn" onclick="executeCommand('decrypt')">decrypt</button>
-        <button class="term-btn" onclick="executeCommand('clear')">clear</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Timeline -->
-  <section id="experience">
-    <div class="container">
-      <h2 class="reveal">Professional Journey</h2>
-      
-      <div class="timeline">
-        
-        <!-- Oracle -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header-row">
-              <div>
-                <h3 class="job-role">Software Developer (Access Management)</h3>
-                <div class="job-company">Oracle Cloud Infrastructure (OCI)</div>
-              </div>
-              <span class="job-date">August 2017 - Present</span>
-            </div>
-            <div class="timeline-body">
-              <p>Key developer on the Access Management and Enforcement team, automating and securing core authentication and authorization workflows for enterprise cloud tenants.</p>
-              <ul class="timeline-bullets">
-                <li>Engineered hardware-security enforcement pipelines incorporating YubiKeys for highly resilient validation protocols.</li>
-                <li>Developed automated access governance services to enforce zero-trust policies dynamically across cloud boundaries.</li>
-                <li>Refactored critical auth paths, improving authorization processing times at scale.</li>
-              </ul>
-            </div>
+          <div class="hero-meta">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Seattle, WA
+            </span>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              Oracle Cloud Infrastructure
+            </span>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              MS Computer Science, UC Santa Barbara
+            </span>
           </div>
         </div>
 
-        <!-- Graduate Researcher UCSB -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header-row">
-              <div>
-                <h3 class="job-role">Graduate Student Researcher</h3>
-                <div class="job-company">UC Santa Barbara</div>
-              </div>
-              <span class="job-date">June 2018 - August 2018</span>
-            </div>
-            <div class="timeline-body">
-              <p>Researched and built secure cloud storage integrations with structural anonymity guarantees.</p>
-              <ul class="timeline-bullets">
-                <li>Designed Fault-Tolerant Oblivious Data Storage systems hiding query access patterns from malicious cloud providers.</li>
-                <li>Adapted distributed key-value storage designs to incorporate Oblivious RAM (ORAM) protocols.</li>
-                <li>Analyzed security-throughput trade-offs in cryptographic metadata shuffling schemes.</li>
-              </ul>
-            </div>
-          </div>
+        <div class="hero-portrait">
+          <img src="img/profile-hero.jpg" alt="Portrait of Mohith Pukale" width="800" height="800" fetchpriority="high">
         </div>
-
-        <!-- Amazon -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header-row">
-              <div>
-                <h3 class="job-role">Software Developer</h3>
-                <div class="job-company">Amazon</div>
-              </div>
-              <span class="job-date">August 2015 - August 2017</span>
-            </div>
-            <div class="timeline-body">
-              <p>Worked in the Consumer Knowledge Platform team developing high-throughput platforms for data queries and analytical big data pipelines.</p>
-              <ul class="timeline-bullets">
-                <li>Re-architected core platform services with an optimized schema, leading to a <strong>25% faster query response time</strong>.</li>
-                <li>Reduced overall operational maintenance load by <strong>15%</strong> by refactoring monoliths into federated microservices.</li>
-                <li>Designed and deployed an automated recovery mechanism for large-scale analytical map-reduce workflows, preventing data gaps.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Amazon Intern -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header-row">
-              <div>
-                <h3 class="job-role">Software Developer Intern</h3>
-                <div class="job-company">Amazon</div>
-              </div>
-              <span class="job-date">January 2015 - July 2015</span>
-            </div>
-            <div class="timeline-body">
-              <p>Contributed to the Consumer Marketing Analytics team, enhancing system reporting and workflow processing pipelines.</p>
-              <ul class="timeline-bullets">
-                <li>Built dynamic graphing systems and interactive reporting tools for downstream marketer analysis.</li>
-                <li>Optimized AWS workflow architectures utilizing Apache Pig to automate big data score aggregations.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Intuit Intern -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header-row">
-              <div>
-                <h3 class="job-role">Software Developer Intern</h3>
-                <div class="job-company">Intuit</div>
-              </div>
-              <span class="job-date">June 2014 - August 2014</span>
-            </div>
-            <div class="timeline-body">
-              <p>Supported the QuickBooks Online ledger platform, specializing in security utilities and databases.</p>
-              <ul class="timeline-bullets">
-                <li>Created a high-speed data masking service to sanitize sensitive production databases for QA validation.</li>
-                <li>Improved data retrieve latencies by <strong>20%</strong> by migration of metadata tables from MySQL to MongoDB.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Featured Projects -->
-  <section id="projects" style="background-color: var(--bg-surface-glow);">
-    <div class="container">
-      <h2 class="reveal">Featured Projects</h2>
-      <div class="projects-grid">
-        
-        <!-- Ramsey Search -->
-        <div class="project-card reveal">
-          <div class="project-info">
-            <div class="project-header">
-              <h3>Ramsey Search</h3>
-              <div class="project-links">
-                <a href="https://github.com/mohithpukale" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-            <p>Cloud-based distributed computation engine using a Go master-slave architecture to find counterexamples for Ramsey's Theorem. Integrates Simulated Annealing and Tabu search to bypass local minima.</p>
-            <div class="project-tags">
-              <span class="tech-tag">Go</span>
-              <span class="tech-tag">Distributed Systems</span>
-              <span class="tech-tag">Optimization</span>
-              <span class="tech-tag">Cloud VM</span>
-            </div>
-            
-            <button class="arch-toggle" onclick="toggleArchitecture(this)">
-              <i class="fa fa-chevron-down"></i> View Architecture Diagram
-            </button>
-            <div class="arch-drawer">
-              <!-- SVG DIAGRAM -->
-              <svg width="100%" height="110" viewBox="0 0 350 110" class="arch-diag-svg">
-                <!-- Master Node -->
-                <rect x="135" y="5" width="80" height="25" rx="4" fill="#2dd4bf" opacity="0.15" stroke="#2dd4bf" stroke-width="1.5"/>
-                <text x="175" y="21" font-size="9" fill="#fff" font-family="monospace" text-anchor="middle">Go Master</text>
-                
-                <!-- Slaves -->
-                <rect x="25" y="70" width="70" height="25" rx="4" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1.5"/>
-                <text x="60" y="86" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">Slave Node A</text>
-                
-                <rect x="140" y="70" width="70" height="25" rx="4" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1.5"/>
-                <text x="175" y="86" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">Slave Node B</text>
-                
-                <rect x="255" y="70" width="70" height="25" rx="4" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1.5"/>
-                <text x="290" y="86" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">Slave Node C</text>
+    <!-- ================= Focus ================= -->
+    <section class="section section-alt" id="focus">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What I do</span>
+          <h2>Where I spend my time</h2>
+          <p>Most of my work lives at the seam between identity, infrastructure, and the operational reality of running a cloud in places with hard constraints.</p>
+        </div>
 
-                <!-- Arrows -->
-                <line x1="150" y1="30" x2="70" y2="70" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
-                <line x1="175" y1="30" x2="175" y2="70" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
-                <line x1="200" y1="30" x2="280" y2="70" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
-                
-                <!-- Marker defs -->
-                <defs>
-                  <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                    <path d="M 0 2 L 8 5 L 0 8 z" fill="#9ca3af"/>
-                  </marker>
-                </defs>
+        <div class="card-grid">
+          <article class="card reveal">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
-          </div>
-        </div>
+            <h3>Identity &amp; Access</h3>
+            <p>Authorization services, identity provider federation, just-in-time access, directory synchronization, and periodic access review. Designing auth paths that stay correct when the network doesn't cooperate.</p>
+          </article>
 
-        <!-- Privacy Preserving Spam Detector -->
-        <div class="project-card reveal">
-          <div class="project-info">
-            <div class="project-header">
-              <h3>Paillier Cryptographic Spam Filter</h3>
-              <div class="project-links">
-                <a href="https://github.com/ap1995/Cryptography" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-            <p>Spam classifier that evaluates text features without accessing plaintext. Uses a partial homomorphic Paillier cryptosystem to compute secure classifications directly on encrypted vectors.</p>
-            <div class="project-tags">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Paillier Cryptosystem</span>
-              <span class="tech-tag">Homomorphic Enc</span>
-              <span class="tech-tag">ML</span>
-            </div>
-            
-            <button class="arch-toggle" onclick="toggleArchitecture(this)">
-              <i class="fa fa-chevron-down"></i> View Architecture Diagram
-            </button>
-            <div class="arch-drawer">
-              <svg width="100%" height="110" viewBox="0 0 350 110" class="arch-diag-svg">
-                <!-- Client -->
-                <rect x="15" y="38" width="80" height="35" rx="4" fill="#2dd4bf" opacity="0.15" stroke="#2dd4bf" stroke-width="1.5"/>
-                <text x="55" y="52" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">Client (Plain)</text>
-                <text x="55" y="63" font-size="7" fill="#9ca3af" font-family="monospace" text-anchor="middle">Encrypts [X]</text>
-                
-                <!-- Classifier -->
-                <rect x="235" y="38" width="100" height="35" rx="4" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1.5"/>
-                <text x="285" y="52" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">Server (Encrypted)</text>
-                <text x="285" y="63" font-size="7" fill="#9ca3af" font-family="monospace" text-anchor="middle">Eval: E(W * X)</text>
-
-                <!-- Arrows -->
-                <path d="M 95 48 L 235 48" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
-                <text x="165" y="43" font-size="7" fill="#9ca3af" font-family="monospace" text-anchor="middle">E(X) -> Server</text>
-                
-                <path d="M 235 63 L 95 63" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
-                <text x="165" y="73" font-size="7" fill="#9ca3af" font-family="monospace" text-anchor="middle">E(Result) -> Decrypt</text>
+          <article class="card reveal">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="7.5" cy="15.5" r="4.5"></circle>
+                <path d="M10.5 12.5 19 4h3v3l-2 2-2-2-2 2-2-2"></path>
               </svg>
             </div>
-          </div>
-        </div>
+            <h3>Hardware-Backed Auth</h3>
+            <p>Security key programming and lifecycle tooling across Windows and Linux, certificate-based workstation login, and migrating login flows from one-time passwords to phishing-resistant U2F.</p>
+          </article>
 
-        <!-- Secure Chat -->
-        <div class="project-card reveal">
-          <div class="project-info">
-            <div class="project-header">
-              <h3>S-Chat (End-to-End Encrypted)</h3>
-              <div class="project-links">
-                <a href="https://github.com/mukundmk/chat-app" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-            <p>Cross-platform chat application with multi-layer end-to-end encryption. Protects credentials and communication using cryptographic primitives including RSA, AES, and PBKDF2.</p>
-            <div class="project-tags">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">E2EE</span>
-              <span class="tech-tag">RSA / AES</span>
-              <span class="tech-tag">Sockets</span>
-            </div>
-            
-            <button class="arch-toggle" onclick="toggleArchitecture(this)">
-              <i class="fa fa-chevron-down"></i> View Architecture Diagram
-            </button>
-            <div class="arch-drawer">
-              <svg width="100%" height="110" viewBox="0 0 350 110" class="arch-diag-svg">
-                <!-- User A -->
-                <rect x="15" y="38" width="70" height="35" rx="4" fill="#2dd4bf" opacity="0.15" stroke="#2dd4bf" stroke-width="1.5"/>
-                <text x="50" y="52" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">Alice</text>
-                <text x="50" y="63" font-size="7" fill="#9ca3af" font-family="monospace" text-anchor="middle">AES-GCM Key</text>
-                
-                <!-- Server -->
-                <rect x="135" y="38" width="80" height="35" rx="4" fill="#9ca3af" opacity="0.15" stroke="#9ca3af" stroke-width="1.5"/>
-                <text x="175" y="52" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">Relay Server</text>
-                <text x="175" y="63" font-size="7" fill="#9ca3af" font-family="monospace" text-anchor="middle">Zero-Knowledge</text>
-
-                <!-- User B -->
-                <rect x="265" y="38" width="70" height="35" rx="4" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1.5"/>
-                <text x="300" y="52" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">Bob</text>
-                <text x="300" y="63" font-size="7" fill="#9ca3af" font-family="monospace" text-anchor="middle">AES-GCM Key</text>
-
-                <!-- Connections -->
-                <line x1="85" y1="55" x2="135" y2="55" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3"/>
-                <line x1="215" y1="55" x2="265" y2="55" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3"/>
-                
-                <!-- Encrypted channel tag -->
-                <path d="M 50 15 Q 175 -5 300 15" fill="none" stroke="#2dd4bf" stroke-width="1.5" stroke-dasharray="4,2"/>
-                <text x="175" y="10" font-size="7" fill="#2dd4bf" font-family="monospace" text-anchor="middle">E2EE Cryptographic Pipe</text>
+          <article class="card reveal">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="8" rx="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
               </svg>
             </div>
-          </div>
-        </div>
+            <h3>Cloud Region Automation</h3>
+            <p>Turning region bring-up into infrastructure as code — provisioning providers, bootstrap sequencing, and removing the manual touch points that make each new region an exception.</p>
+          </article>
 
-        <!-- Reflector -->
-        <div class="project-card reveal">
-          <div class="project-info">
-            <div class="project-header">
-              <h3>Reflector (TCP Session Spoofing)</h3>
-              <div class="project-links">
-                <a href="https://github.com/mohithpukale/Reflector" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-            <p>Low-level network tool written in C utilizing raw sockets, libpcap, and libnet to spoof TCP states. Intercepts incoming network payloads and re-relays them under virtual identities at the Ethernet/IP levels.</p>
-            <div class="project-tags">
-              <span class="tech-tag">C</span>
-              <span class="tech-tag">libpcap</span>
-              <span class="tech-tag">libnet</span>
-              <span class="tech-tag">Network Security</span>
-            </div>
-            
-            <button class="arch-toggle" onclick="toggleArchitecture(this)">
-              <i class="fa fa-chevron-down"></i> View Architecture Diagram
-            </button>
-            <div class="arch-drawer">
-              <svg width="100%" height="110" viewBox="0 0 350 110" class="arch-diag-svg">
-                <!-- Attacker -->
-                <rect x="15" y="38" width="70" height="35" rx="4" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1.5"/>
-                <text x="50" y="52" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">Attacker</text>
-                
-                <!-- Reflector C -->
-                <rect x="135" y="38" width="80" height="35" rx="4" fill="#2dd4bf" opacity="0.15" stroke="#2dd4bf" stroke-width="1.5"/>
-                <text x="175" y="52" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">C Reflector</text>
-                <text x="175" y="63" font-size="7" fill="#9ca3af" font-family="monospace" text-anchor="middle">libpcap / libnet</text>
-
-                <!-- Victim -->
-                <rect x="265" y="38" width="70" height="35" rx="4" fill="#9ca3af" opacity="0.15" stroke="#9ca3af" stroke-width="1.5"/>
-                <text x="300" y="52" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">Victim (Virtual)</text>
-
-                <!-- Intercept -->
-                <path d="M 85 45 L 135 45" stroke="#ff5f56" stroke-width="1.2" marker-end="url(#arrow)"/>
-                <text x="110" y="40" font-size="6" fill="#ff5f56" font-family="monospace" text-anchor="middle">Payload</text>
-                
-                <path d="M 175 38 L 175 15 L 300 15 L 300 38" fill="none" stroke="#2dd4bf" stroke-width="1.2" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
-                <text x="237" y="10" font-size="6" fill="#2dd4bf" font-family="monospace" text-anchor="middle">Spoofed Forward</text>
+          <article class="card reveal">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
               </svg>
             </div>
-          </div>
-        </div>
-
-        <!-- WikiSummary -->
-        <div class="project-card reveal">
-          <div class="project-info">
-            <div class="project-header">
-              <h3>WikiSummary</h3>
-              <div class="project-links">
-                <a href="https://github.com/mohithpukale/wikiSummary" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-            <p>Search and NLP text-summarizer web application. Utilizes Lucene-based search engines (Elasticsearch, Solr) to index datasets, analyzing query term density in sentences for abstract extraction.</p>
-            <div class="project-tags">
-              <span class="tech-tag">Python 3</span>
-              <span class="tech-tag">Elasticsearch</span>
-              <span class="tech-tag">Apache Solr</span>
-              <span class="tech-tag">NLP</span>
-            </div>
-            
-            <button class="arch-toggle" onclick="toggleArchitecture(this)">
-              <i class="fa fa-chevron-down"></i> View Architecture Diagram
-            </button>
-            <div class="arch-drawer">
-              <svg width="100%" height="110" viewBox="0 0 350 110" class="arch-diag-svg">
-                <!-- Web Client -->
-                <rect x="15" y="38" width="70" height="35" rx="4" fill="#2dd4bf" opacity="0.15" stroke="#2dd4bf" stroke-width="1.5"/>
-                <text x="50" y="52" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">Web Client</text>
-                
-                <!-- Python Flask/API -->
-                <rect x="130" y="38" width="90" height="35" rx="4" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1.5"/>
-                <text x="175" y="52" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">Python Engine</text>
-                <text x="175" y="63" font-size="7" fill="#9ca3af" font-family="monospace" text-anchor="middle">Term-Density NLP</text>
-
-                <!-- Index -->
-                <rect x="265" y="38" width="70" height="35" rx="4" fill="#9ca3af" opacity="0.15" stroke="#9ca3af" stroke-width="1.5"/>
-                <text x="300" y="52" font-size="8" fill="#fff" font-family="monospace" text-anchor="middle">Solr/ES</text>
-
-                <!-- Links -->
-                <line x1="85" y1="55" x2="130" y2="55" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
-                <line x1="220" y1="55" x2="265" y2="55" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Matrix -->
-  <section id="skills">
-    <div class="container">
-      <h2 class="reveal">Technical Skillset</h2>
-      
-      <div class="skills-container">
-        
-        <!-- Programming Languages -->
-        <div class="skills-category reveal">
-          <h3>Languages</h3>
-          <div class="skills-list">
-            <div class="skill-row">
-              <i class="devicon-java-plain"></i>
-              <div class="skill-details">
-                <div class="skill-name">Java <span>95%</span></div>
-                <div class="skill-level-bar"><div class="skill-level-fill" data-width="95%"></div></div>
-              </div>
-            </div>
-            <div class="skill-row">
-              <i class="devicon-python-plain"></i>
-              <div class="skill-details">
-                <div class="skill-name">Python <span>90%</span></div>
-                <div class="skill-level-bar"><div class="skill-level-fill" data-width="90%"></div></div>
-              </div>
-            </div>
-            <div class="skill-row">
-              <i class="devicon-go-original-wordmark"></i>
-              <div class="skill-details">
-                <div class="skill-name">Go <span>85%</span></div>
-                <div class="skill-level-bar"><div class="skill-level-fill" data-width="85%"></div></div>
-              </div>
-            </div>
-            <div class="skill-row">
-              <i class="devicon-c-plain"></i>
-              <div class="skill-details">
-                <div class="skill-name">C <span>80%</span></div>
-                <div class="skill-level-bar"><div class="skill-level-fill" data-width="80%"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Infrastructure & Security -->
-        <div class="skills-category reveal">
-          <h3>Infrastructure &amp; Security</h3>
-          <div class="skills-list">
-            <div class="skill-row">
-              <i class="devicon-amazonwebservices-original"></i>
-              <div class="skill-details">
-                <div class="skill-name">AWS / OCI <span>90%</span></div>
-                <div class="skill-level-bar"><div class="skill-level-fill" data-width="90%"></div></div>
-              </div>
-            </div>
-            <div class="skill-row">
-              <i class="fa-solid fa-key"></i>
-              <div class="skill-details">
-                <div class="skill-name">IAM / AuthZ <span>95%</span></div>
-                <div class="skill-level-bar"><div class="skill-level-fill" data-width="95%"></div></div>
-              </div>
-            </div>
-            <div class="skill-row">
-              <i class="fa-solid fa-lock"></i>
-              <div class="skill-details">
-                <div class="skill-name">Cryptography <span>85%</span></div>
-                <div class="skill-level-bar"><div class="skill-level-fill" data-width="85%"></div></div>
-              </div>
-            </div>
-            <div class="skill-row">
-              <i class="fa-solid fa-network-wired"></i>
-              <div class="skill-details">
-                <div class="skill-name">Network Security <span>80%</span></div>
-                <div class="skill-level-bar"><div class="skill-level-fill" data-width="80%"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Databases & Frameworks -->
-        <div class="skills-category reveal">
-          <h3>Databases &amp; Platforms</h3>
-          <div class="skills-list">
-            <div class="skill-row">
-              <i class="devicon-mongodb-plain"></i>
-              <div class="skill-details">
-                <div class="skill-name">MongoDB <span>85%</span></div>
-                <div class="skill-level-bar"><div class="skill-level-fill" data-width="85%"></div></div>
-              </div>
-            </div>
-            <div class="skill-row">
-              <i class="devicon-mysql-plain"></i>
-              <div class="skill-details">
-                <div class="skill-name">MySQL <span>80%</span></div>
-                <div class="skill-level-bar"><div class="skill-level-fill" data-width="80%"></div></div>
-              </div>
-            </div>
-            <div class="skill-row">
-              <i class="devicon-git-plain"></i>
-              <div class="skill-details">
-                <div class="skill-name">Git / CI-CD <span>90%</span></div>
-                <div class="skill-level-bar"><div class="skill-level-fill" data-width="90%"></div></div>
-              </div>
-            </div>
-            <div class="skill-row">
-              <i class="fa-solid fa-gears"></i>
-              <div class="skill-details">
-                <div class="skill-name">Hadoop / Big Data <span>75%</span></div>
-                <div class="skill-level-bar"><div class="skill-level-fill" data-width="75%"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container contact-container">
-      <h2 class="reveal">Get in Touch</h2>
-      <div class="contact-card reveal">
-        <p>I'm based in Seattle, WA. Feel free to reach out to discuss distributed systems architectures, cryptography, cloud safety configurations, or general industry topics.</p>
-        <div class="contact-links-grid">
-          <a href="mailto:mohithrp93@gmail.com" class="contact-item-btn"><i class="fa fa-envelope"></i> Email</a>
-          <a href="mailto:mohithpukale@gmail.com" class="contact-item-btn"><i class="fa fa-envelope-open"></i> Alternate Email</a>
-          <a href="https://www.linkedin.com/in/mohith-pukale" class="contact-item-btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <a href="https://github.com/mohithpukale" class="contact-item-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <h3>Distributed Systems</h3>
+            <p>Multi-region failover and disaster recovery, batching and backpressure in directory pipelines, dynamic configuration for degraded regions, and data platforms that recover from failure on their own.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Mohith Pukale. All Rights Reserved.</p>
-      <p style="color: var(--text-muted); font-size: 0.75rem;">Crafted with modern HTML5, CSS3, &amp; Javascript.</p>
+    <!-- ================= Experience ================= -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Experience</span>
+          <h2>Professional background</h2>
+          <p>Work at Oracle is described in general terms — internal program and system names are omitted.</p>
+        </div>
+
+        <div class="timeline">
+
+          <article class="tl-item is-current reveal">
+            <div class="tl-head">
+              <h3 class="tl-role">Principal Software Engineer</h3>
+              <span class="tl-date">August 2019 &mdash; Present</span>
+            </div>
+            <div class="tl-org">Oracle Cloud Infrastructure &middot; Seattle, WA</div>
+            <p class="tl-summary">
+              Access management and enforcement. I own identity and authorization infrastructure for
+              isolated, sovereign, and dedicated cloud environments, and lead the cross-team programs
+              that get those environments stood up and kept running.
+            </p>
+            <ul class="tl-points">
+              <li>Led design and delivery of the identity and permissions capabilities required for fully automated region bring-up, so new regions bootstrap policy provisioning and directory synchronization without manual intervention.</li>
+              <li>Broke a cyclic dependency between the internal authorization platform and a legacy corporate identity provider, clearing the path to a modern provider with phishing-resistant hardware login in place of one-time passwords.</li>
+              <li>Led the effort to identify users affected by that identity provider migration and to move them onto new credentials without loss of access.</li>
+              <li>Authored the infrastructure-as-code provider for the authorization service, letting partner teams declare access resources directly instead of filing requests. Cut resource-creation time roughly 50% for our largest partner team, and extended the provider with owner groups and membership separation as adoption grew.</li>
+              <li>Led automation of credential rotation for a security hardening initiative — standing up the rotator service, adding service-principal support across internal and customer-facing environments, and integrating an SSH certificate authority. Rotations dropped to under 5 minutes per secret with minimal manual involvement.</li>
+              <li>Built security-key programming and lifecycle tooling for Windows, Oracle Linux, and secure-facility environments, including certificate provisioning for multi-factor workstation login. Regional teams could then program and distribute keys for 1,000+ users locally instead of depending on shipping from a single site.</li>
+              <li>Reduced the entities under periodic access review from ~5,000 to ~200 by switching the reviewed entity from resources and groups to users carrying an eligibility attribute, cutting reviewer load without loss of coverage.</li>
+              <li>Led design and delivery of an isolated administrative environment that gives internal support engineers scoped, audited access to dedicated cloud distributions, integrating console, plugin, and partner applications, and drove it through architecture and security review boards. Bootstrapped the resulting environments and automated their resource creation to remove most manual touch points.</li>
+              <li>Built disaster recovery and multi-region administrative login with downstream partner teams, so dedicated regions stay reachable during a regional failure, and added per-region timeout controls with dynamic adjustment for regions on degraded networks.</li>
+              <li>Stood up a Windows Active Directory proof of concept end to end — network, jump hosts, gateway, directory, and group policy login — then designed the pre-production and production architecture as a reusable blueprint for future customers.</li>
+              <li>Refactored a single-purpose directory syncer into a generic job that synchronizes to multiple identity domains, and added batching to the directory update pipeline — splitting a bulk change across ~40k accounts into batches of 500 so it landed incrementally instead of blocking the pipeline on a single long-running thread.</li>
+              <li>Mentor engineers through onboarding and their first designs, run brown-bag sessions and runbooks for the processes I own, and act as the technical point of contact for partner teams and program managers.</li>
+            </ul>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-head">
+              <h3 class="tl-role">Graduate Student Researcher</h3>
+              <span class="tl-date">June 2018 &mdash; August 2018</span>
+            </div>
+            <div class="tl-org">UC Santa Barbara</div>
+            <p class="tl-summary">
+              Built a fault-tolerant oblivious data store — cloud storage that provides availability and
+              privacy by hiding data access patterns from the storage provider itself.
+            </p>
+            <ul class="tl-points">
+              <li>Adapted existing fault-tolerant storage systems to incorporate Oblivious RAM.</li>
+              <li>Designed the components responsible for concealing access patterns, and analyzed the resulting security and throughput trade-offs.</li>
+            </ul>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-head">
+              <h3 class="tl-role">Software Developer</h3>
+              <span class="tl-date">August 2015 &mdash; August 2017</span>
+            </div>
+            <div class="tl-org">Amazon &middot; Seattle, WA</div>
+            <p class="tl-summary">
+              Consumer Knowledge Platform — a data engineering team building the platform for data access
+              and big-data workflows.
+            </p>
+            <ul class="tl-points">
+              <li>Re-architected the core service with a new data model and metrics, leading to 25% faster response times.</li>
+              <li>Reduced operational load 15% by decomposing a monolithic service into a federated one.</li>
+              <li>Implemented automated recovery for big-data analytics workflows, along with failure and delay notification.</li>
+            </ul>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-head">
+              <h3 class="tl-role">Software Developer Intern</h3>
+              <span class="tl-date">January 2015 &mdash; July 2015</span>
+            </div>
+            <div class="tl-org">Amazon</div>
+            <p class="tl-summary">
+              Consumer Marketing Analytics — measuring downstream impact and customer behavior.
+            </p>
+            <ul class="tl-points">
+              <li>Improved the analytics portal with interactive graphing, report generation, and pagination.</li>
+              <li>Automated aggregation and publishing of customer scores using Apache Pig and AWS workflow services.</li>
+            </ul>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-head">
+              <h3 class="tl-role">Software Developer Intern</h3>
+              <span class="tl-date">June 2014 &mdash; August 2014</span>
+            </div>
+            <div class="tl-org">Intuit</div>
+            <p class="tl-summary">
+              QuickBooks Online — accounting and ledger software for small and medium businesses.
+            </p>
+            <ul class="tl-points">
+              <li>Built a service that masks sensitive production data for use by QA engineers.</li>
+              <li>Reduced request time for that service 20% by moving its backend from MySQL to MongoDB.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Skills ================= -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Toolkit</span>
+          <h2>Skills &amp; technologies</h2>
+        </div>
+
+        <div class="skill-groups">
+          <div class="skill-group reveal">
+            <h3>Languages</h3>
+            <ul class="tags">
+              <li>Go</li><li>Java</li><li>Python</li><li>C</li><li>Bash</li><li>SQL</li><li>PowerShell</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>Identity &amp; Security</h3>
+            <ul class="tags">
+              <li>OAuth 2.0</li><li>SAML</li><li>OIDC</li><li>LDAP</li><li>Active Directory</li>
+              <li>PKI &amp; certificates</li><li>FIDO U2F</li><li>YubiKey</li><li>SSH CA</li>
+              <li>Secret rotation</li><li>Cryptography</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>Cloud &amp; Infrastructure</h3>
+            <ul class="tags">
+              <li>Oracle Cloud Infrastructure</li><li>AWS</li><li>Infrastructure as code</li>
+              <li>Terraform-style providers</li><li>Network &amp; VCN design</li>
+              <li>Disaster recovery</li><li>CI/CD</li><li>Linux</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>Data &amp; Platforms</h3>
+            <ul class="tags">
+              <li>Distributed systems</li><li>MySQL</li><li>MongoDB</li><li>Apache Hadoop</li>
+              <li>Apache Pig</li><li>NumPy &amp; SciPy</li><li>Elasticsearch</li><li>Solr</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Education ================= -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Education</span>
+          <h2>Academic background</h2>
+        </div>
+
+        <div class="edu-grid">
+          <article class="edu reveal">
+            <h3>University of California, Santa Barbara</h3>
+            <div class="degree">Master of Science, Computer Science</div>
+            <div class="edu-date">September 2017 &mdash; June 2019</div>
+            <p>GPA: 3.9 / 4.0</p>
+            <p>Coursework: Advanced Topics in Security, Advanced Topics in Cryptography, Cloud Computing, Information Retrieval.</p>
+          </article>
+
+          <article class="edu reveal">
+            <h3>PES Institute of Technology</h3>
+            <div class="degree">Bachelor of Engineering, Information Science &amp; Engineering</div>
+            <div class="edu-date">September 2011 &mdash; June 2015</div>
+            <p>GPA: 9.25 / 10</p>
+            <p>Electives: Computer &amp; Network Security, Natural Language Processing, Data Mining.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Contact ================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <h2>Let's talk</h2>
+          <p>
+            I'm based in Seattle, WA. If you're working on identity, cloud infrastructure, or
+            distributed systems — or just want to compare notes — I'd be glad to hear from you.
+          </p>
+          <div class="contact-actions">
+            <a href="mailto:mohithpukale@gmail.com" class="btn btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-10 6L2 7"></path>
+              </svg>
+              Email me
+            </a>
+            <a href="https://www.linkedin.com/in/mohith-pukale" class="btn btn-ghost" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.77 2.65 4.77 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21h-4z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/mohithpukale" class="btn btn-ghost" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.6 5.6.6 12c0 5 3.3 9.3 7.8 10.8.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6a11.5 11.5 0 0 0 7.8-10.8C23.4 5.6 18.3.5 12 .5z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bar">
+      <span>&copy; <span id="year">2026</span> Mohith Pukale</span>
+      <ul class="footer-links">
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="https://www.linkedin.com/in/mohith-pukale" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/mohithpukale" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
     </div>
   </footer>
 
-  <!-- Javascript Logic -->
-  <script src="js/resume.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

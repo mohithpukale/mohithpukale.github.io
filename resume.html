@@ -3,504 +3,193 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Resume of Mohith Pukale - Principal Systems & Cloud Security Engineer">
-  <title>Resume | Mohith Pukale</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resume of Mohith Pukale — Principal Software Engineer, identity and cloud infrastructure. Seattle, WA.">
+  <meta name="author" content="Mohith Pukale">
 
-  <!-- Google Fonts -->
+  <title>Mohith Pukale — Resume</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700|Fira+Code:400,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    :root {
-      --bg-base: #f8fafc;
-      --bg-card: #ffffff;
-      --text-main: #1e293b;
-      --text-muted: #64748b;
-      --text-dark: #0f172a;
-      --primary: #0d9488;
-      --primary-hover: #0f766e;
-      --border-color: #e2e8f0;
-      
-      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-      --font-mono: 'Fira Code', monospace;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-body);
-      background-color: var(--bg-base);
-      color: var(--text-main);
-      line-height: 1.5;
-      padding: 2.5rem 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-
-    /* Print Controls Banner */
-    .controls-banner {
-      width: 100%;
-      max-width: 800px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background-color 0.15s ease;
-    }
-    .btn:hover {
-      background-color: var(--primary-hover);
-    }
-    .btn-outline {
-      background-color: transparent;
-      color: var(--text-main);
-      border: 1px solid var(--border-color);
-    }
-    .btn-outline:hover {
-      background-color: var(--bg-base);
-    }
-
-    /* Resume Page Container */
-    .resume-page {
-      background: var(--bg-card);
-      width: 100%;
-      max-width: 800px;
-      min-height: 1030px; /* Standard Letter ratio */
-      padding: 3rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
-      border: 1px solid var(--border-color);
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Header styling */
-    header {
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 1.25rem;
-      margin-bottom: 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-
-    .header-left h1 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--text-dark);
-      letter-spacing: -0.5px;
-      line-height: 1.1;
-      margin-bottom: 0.25rem;
-    }
-
-    .header-left .title {
-      font-size: 1.1rem;
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    .header-right {
-      text-align: right;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-
-    .header-right a {
-      color: var(--text-main);
-      text-decoration: none;
-    }
-    .header-right a:hover {
-      color: var(--primary);
-    }
-    .header-right i {
-      width: 16px;
-      color: var(--primary);
-    }
-
-    /* Content Layout */
-    .resume-content {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 2.2rem;
-      flex-grow: 1;
-    }
-
-    /* Column Styles */
-    .sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .main-col {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    /* Sections styling */
-    section h2 {
-      font-size: 1rem;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--text-dark);
-      letter-spacing: 0.5px;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 0.3rem;
-      margin-bottom: 0.8rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    section h2 i {
-      color: var(--primary);
-      font-size: 0.95rem;
-    }
-
-    /* Timeline Items */
-    .job {
-      margin-bottom: 1.25rem;
-    }
-    .job:last-child {
-      margin-bottom: 0;
-    }
-
-    .job-header {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 0.2rem;
-    }
-
-    .job-meta {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.82rem;
-      color: var(--primary);
-      font-weight: 500;
-      margin-bottom: 0.5rem;
-    }
-
-    .job ul {
-      list-style-type: none;
-    }
-
-    .job li {
-      font-size: 0.82rem;
-      color: var(--text-main);
-      position: relative;
-      padding-left: 0.9rem;
-      margin-bottom: 0.35rem;
-      line-height: 1.4;
-    }
-
-    .job li::before {
-      content: "•";
-      color: var(--primary);
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-    }
-
-    /* Sidebar Blocks */
-    .skills-group {
-      margin-bottom: 0.75rem;
-    }
-    .skills-group:last-child {
-      margin-bottom: 0;
-    }
-    .skills-group h3 {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 0.25rem;
-    }
-    .skills-group p {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
-
-    .project-item {
-      margin-bottom: 0.8rem;
-    }
-    .project-item:last-child {
-      margin-bottom: 0;
-    }
-    .project-item h3 {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 0.15rem;
-    }
-    .project-item p {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      line-height: 1.35;
-    }
-
-    .edu-item {
-      margin-bottom: 0.8rem;
-    }
-    .edu-item:last-child {
-      margin-bottom: 0;
-    }
-    .edu-item h3 {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--text-dark);
-    }
-    .edu-item .degree {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--primary);
-    }
-    .edu-item .meta {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      display: flex;
-      justify-content: space-between;
-      margin-top: 0.1rem;
-    }
-
-    /* Print Styling overrides */
-    @media print {
-      body {
-        background-color: #ffffff;
-        padding: 0;
-        display: block;
-      }
-      .no-print {
-        display: none !important;
-      }
-      .resume-page {
-        box-shadow: none;
-        border: none;
-        padding: 0;
-        max-width: 100%;
-        min-height: auto;
-      }
-      @page {
-        size: letter;
-        margin: 0.5in;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="css/resume.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- Non-printed Control Banner -->
-  <div class="controls-banner no-print">
-    <div>
-      <a href="index.html" class="btn btn-outline"><i class="fa fa-arrow-left"></i> Portfolio Home</a>
-    </div>
-    <div style="display: flex; gap: 0.8rem;">
-      <button onclick="window.print()" class="btn"><i class="fa fa-print"></i> Print / Save PDF</button>
-    </div>
+  <div class="page-actions">
+    <a href="index.html" class="action">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      Back to portfolio
+    </a>
+    <button class="action" onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+      Print
+    </button>
+    <a href="resources/Mohith-Pukale-Resume.pdf" class="action action-primary" download>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      Download PDF
+    </a>
   </div>
 
-  <!-- The Resume Page -->
-  <div class="resume-page">
-    <header>
-      <div class="header-left">
-        <h1>Mohith Pukale</h1>
-        <div class="title">Principal Systems &amp; Cloud Security Engineer</div>
-      </div>
-      <div class="header-right">
-        <div><i class="fa-solid fa-envelope"></i> <a href="mailto:mohithpukale@gmail.com">mohithpukale@gmail.com</a></div>
-        <div><i class="fa-solid fa-globe"></i> <a href="https://mohithpukale.com">mohithpukale.com</a></div>
-        <div><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/mohith-pukale">linkedin.com/in/mohith-pukale</a></div>
-        <div><i class="fa-brands fa-github"></i> <a href="https://github.com/mohithpukale">github.com/mohithpukale</a></div>
-        <div><i class="fa-solid fa-location-dot"></i> Seattle, WA</div>
+  <main class="sheet">
+
+    <header class="masthead">
+      <h1>Mohith Pukale</h1>
+      <div class="title">Principal Software Engineer — Identity &amp; Cloud Infrastructure</div>
+      <div class="contact-row">
+        <span>Seattle, WA</span>
+        <span class="sep">|</span>
+        <a href="mailto:mohithpukale@gmail.com">mohithpukale@gmail.com</a>
+        <span class="sep">|</span>
+        <a href="https://www.linkedin.com/in/mohith-pukale">linkedin.com/in/mohith-pukale</a>
+        <span class="sep">|</span>
+        <a href="https://github.com/mohithpukale">github.com/mohithpukale</a>
+        <span class="sep">|</span>
+        <a href="https://mohithpukale.github.io">mohithpukale.github.io</a>
       </div>
     </header>
 
-    <div class="resume-content">
-      <!-- Left sidebar: Skills, Projects, Education -->
-      <aside class="sidebar">
-        
-        <section>
-          <h2><i class="fa-solid fa-list-check"></i> Skills</h2>
-          <div class="skills-group">
-            <h3>Languages</h3>
-            <p>Java, Python, C, Go, Ruby, SQL</p>
-          </div>
-          <div class="skills-group">
-            <h3>Security &amp; Cloud</h3>
-            <p>Access Control (AuthZ), Identity Management (IAM), Identity Providers, YubiKeys, AWS Cloud, OCI, Terraform</p>
-          </div>
-          <div class="skills-group">
-            <h3>Data Platforms</h3>
-            <p>MySQL, MongoDB, Elasticsearch, Solr, Hadoop Big Data, Apache Pig</p>
-          </div>
-        </section>
+    <section class="block">
+      <h2>Summary</h2>
+      <p class="summary">
+        Software engineer specializing in identity and access infrastructure for large-scale cloud
+        platforms. I design and deliver the authorization services, hardware-backed authentication, and
+        region automation that isolated, sovereign, and dedicated cloud environments depend on — and I
+        lead the cross-team programs that get them into production. Equally comfortable writing the
+        service, designing the network under it, and driving it through architecture and security review.
+      </p>
+    </section>
 
-        <section>
-          <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
-          <div class="edu-item">
-            <h3>UC Santa Barbara</h3>
-            <div class="degree">M.S. Computer Science</div>
-            <div class="meta">
-              <span>Sept 2017 – June 2019</span>
-              <span>GPA: 3.49</span>
-            </div>
-          </div>
-          <div class="edu-item">
-            <h3>PES Institute of Tech</h3>
-            <div class="degree">B.E. Information Science</div>
-            <div class="meta">
-              <span>Sept 2011 – June 2015</span>
-              <span>GPA: 9.25 / 10</span>
-            </div>
-          </div>
-        </section>
+    <section class="block">
+      <h2>Experience</h2>
 
-        <section>
-          <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
-          <div class="project-item">
-            <h3>Oblivious Data Storage (2018)</h3>
-            <p>Implemented ORAM algorithms inside fault-tolerant distributed storage systems to hide query pattern signatures from host hypervisors.</p>
-          </div>
-          <div class="project-item">
-            <h3>Ramsey Search (2018)</h3>
-            <p>Developed a distributed search and optimization framework in Go. Deployed Master-Slave topologies to solve graph calculations.</p>
-          </div>
-          <div class="project-item">
-            <h3>Secure Chat (2015)</h3>
-            <p>Built a cross-platform messaging application implementing layered End-to-End Encryption (E2EE) using RSA, AES, and PBKDF2.</p>
-          </div>
-        </section>
+      <article class="role">
+        <div class="role-head">
+          <h3>Principal Software Engineer</h3>
+          <span class="role-when">August 2019 — Present</span>
+        </div>
+        <div class="role-org">Oracle Cloud Infrastructure — Seattle, WA</div>
+        <ul class="bullets">
+          <li>Own identity and authorization infrastructure for isolated, sovereign, and dedicated cloud environments, spanning the internal authorization platform, just-in-time access service, and identity provider federation.</li>
+          <li>Led design and delivery of the identity and permissions capabilities required for fully automated region bring-up, so new regions bootstrap policy provisioning and directory synchronization with no manual intervention.</li>
+          <li>Broke a cyclic dependency between the internal authorization platform and a legacy corporate identity provider, clearing the path to a modern provider with phishing-resistant hardware login in place of one-time passwords; led identification and migration of affected users without loss of access.</li>
+          <li>Authored the infrastructure-as-code provider for the authorization service, letting partner teams declare access resources directly instead of filing requests; cut resource-creation time ~50% for our largest partner team and extended the provider with owner groups and membership separation as adoption grew.</li>
+          <li>Led automation of credential rotation for a security hardening initiative — bootstrapped the rotator service, added service-principal support across internal and customer-facing environments, and integrated an SSH certificate authority, bringing each rotation to under 5 minutes with minimal manual involvement.</li>
+          <li>Built security-key programming and lifecycle tooling for Windows, Oracle Linux, and secure-facility environments, including certificate provisioning for multi-factor workstation login, letting regional teams program and distribute keys for 1,000+ users locally instead of shipping from a single site.</li>
+          <li>Cut entities under periodic access review from ~5,000 to ~200 by switching the reviewed entity from resources and groups to users carrying an eligibility attribute, reducing reviewer load without losing coverage.</li>
+          <li>Added batching to the directory update pipeline, splitting a bulk change across ~40k accounts into batches of 500 so it landed incrementally instead of blocking on a single long-running thread; refactored a single-purpose directory syncer into a generic multi-domain sync job.</li>
+          <li>Led design and delivery of an isolated administrative environment giving internal support engineers scoped, audited access to dedicated cloud distributions, integrating console, plugin, and partner applications, and drove it through architecture and security review boards; bootstrapped the resulting environments and automated their resource creation to remove most manual touch points.</li>
+          <li>Delivered disaster recovery and multi-region administrative login with downstream partner teams, keeping dedicated regions reachable during a regional failure; added per-region timeout controls and dynamic adjustment for regions with degraded networks.</li>
+          <li>Stood up a Windows Active Directory proof of concept end to end — network, jump hosts, gateway, directory, and group-policy login — then designed the pre-production and production architecture as a reusable deployment blueprint for future customers and regions.</li>
+          <li>Mentor engineers through onboarding and their first designs; run brown-bag sessions and author the runbooks for the processes I own; act as technical point of contact for partner teams and program managers.</li>
+        </ul>
+      </article>
 
-      </aside>
+      <article class="role">
+        <div class="role-head">
+          <h3>Graduate Student Researcher</h3>
+          <span class="role-when">June 2018 — August 2018</span>
+        </div>
+        <div class="role-org">University of California, Santa Barbara</div>
+        <ul class="bullets">
+          <li>Built a fault-tolerant oblivious data store: cloud storage providing availability and privacy by hiding data access patterns from the storage provider itself.</li>
+          <li>Adapted existing fault-tolerant storage systems to incorporate Oblivious RAM, and designed the components concealing access patterns.</li>
+        </ul>
+      </article>
 
-      <!-- Right main col: Experience -->
-      <main class="main-col">
-        <section>
-          <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+      <article class="role">
+        <div class="role-head">
+          <h3>Software Developer</h3>
+          <span class="role-when">August 2015 — August 2017</span>
+        </div>
+        <div class="role-org">Amazon — Seattle, WA</div>
+        <ul class="bullets">
+          <li>Re-architected the Consumer Knowledge Platform's core service with a new data model and metrics, leading to 25% faster response times.</li>
+          <li>Reduced operational load 15% by decomposing a monolithic service into a federated one.</li>
+          <li>Implemented automated recovery for big-data analytics workflows, plus failure and delay notification.</li>
+        </ul>
+      </article>
 
-          <!-- Oracle II / Principal -->
-          <div class="job">
-            <div class="job-header">
-              <span>Software Engineer II (Access Control)</span>
-              <span>Seattle, WA</span>
-            </div>
-            <div class="job-meta">
-              <span>Oracle Cloud Infrastructure (OCI)</span>
-              <span>Aug 2021 – Present</span>
-            </div>
-            <ul>
-              <li>Designed and engineered modern authorization pipelines, enabling secure, isolated consumption of core internal cloud APIs by external client services.</li>
-              <li>Co-architected an automated recurring resource review validation service, collaborating across Identity Provider, Console, and Core UI product teams.</li>
-              <li>Automated regional service expansion deployments, reducing new cloud availability zone boot times from 7 days down to 3 hours.</li>
-              <li>Designed and implemented hardware token integration, retrofitting yubikeys to support key identity translation shifts.</li>
-            </ul>
-          </div>
+      <article class="role">
+        <div class="role-head">
+          <h3>Software Developer Intern</h3>
+          <span class="role-when">January 2015 — July 2015</span>
+        </div>
+        <div class="role-org">Amazon</div>
+        <ul class="bullets">
+          <li>Improved the Consumer Marketing Analytics portal with interactive graphing, report generation, and pagination.</li>
+          <li>Automated aggregation and publishing of customer scores using Apache Pig and AWS workflow services.</li>
+        </ul>
+      </article>
 
-          <!-- Oracle I -->
-          <div class="job">
-            <div class="job-header">
-              <span>Software Engineer (Access Control)</span>
-              <span>Seattle, WA</span>
-            </div>
-            <div class="job-meta">
-              <span>Oracle Cloud Infrastructure (OCI)</span>
-              <span>Aug 2019 – Jul 2021</span>
-            </div>
-            <ul>
-              <li>Developed a custom, high-speed Terraform provider to allow cloud tenants to configure and manage resource-level authorization models programmatically.</li>
-              <li>Co-designed and implemented access policy enforcement frameworks tailored specifically for isolated air-gapped government cloud zones.</li>
-              <li>Built provisioning and programming binaries to flash hardware keys on-site.</li>
-            </ul>
-          </div>
+      <article class="role">
+        <div class="role-head">
+          <h3>Software Developer Intern</h3>
+          <span class="role-when">June 2014 — August 2014</span>
+        </div>
+        <div class="role-org">Intuit</div>
+        <ul class="bullets">
+          <li>Built a service that masks sensitive production data for use by QA engineers on QuickBooks Online.</li>
+          <li>Reduced request time for that service 20% by moving its backend from MySQL to MongoDB.</li>
+        </ul>
+      </article>
+    </section>
 
-          <!-- Amazon -->
-          <div class="job">
-            <div class="job-header">
-              <span>Software Engineer</span>
-              <span>Bangalore, India</span>
-            </div>
-            <div class="job-meta">
-              <span>Amazon</span>
-              <span>Aug 2015 – Aug 2017</span>
-            </div>
-            <ul>
-              <li>Re-engineered core database schemas and service telemetry inside the Analytics Platform, yielding a 25% query latency improvement.</li>
-              <li>Minimized operational on-call overhead by 15% by refactoring monolithic storage access points into isolated, federated microservices.</li>
-              <li>Designed recovery systems and alerts to monitor delays in massive analytical Map-Reduce processes.</li>
-            </ul>
-          </div>
+    <section class="block">
+      <h2>Skills</h2>
+      <dl class="skills-table">
+        <dt>Languages</dt>
+        <dd>Go, Java, Python, C, Bash, SQL, PowerShell</dd>
 
-          <!-- Amazon Intern -->
-          <div class="job">
-            <div class="job-header">
-              <span>Software Engineer Intern</span>
-              <span>Bangalore, India</span>
-            </div>
-            <div class="job-meta">
-              <span>Amazon</span>
-              <span>Jan 2015 – Jul 2015</span>
-            </div>
-            <ul>
-              <li>Engineered interactive dashboard visualization views supporting customer segmentation analytics graphs.</li>
-              <li>Developed big data compute routines utilizing Apache Pig scripts to schedule regular scores reporting.</li>
-            </ul>
-          </div>
+        <dt>Identity &amp; Security</dt>
+        <dd>OAuth 2.0, SAML, OIDC, LDAP, Active Directory &amp; Group Policy, PKI and certificate management, FIDO U2F, YubiKey, SSH certificate authority, secret rotation, applied cryptography</dd>
 
-          <!-- Intuit Intern -->
-          <div class="job">
-            <div class="job-header">
-              <span>Software Engineer Intern</span>
-              <span>Bangalore, India</span>
-            </div>
-            <div class="job-meta">
-              <span>Intuit</span>
-              <span>Jun 2014 – Aug 2014</span>
-            </div>
-            <ul>
-              <li>Created a database anonymizer utility for sanitizing sensitive client ledger data prior to QA consumption.</li>
-              <li>Reduced request latency by 20% by moving metadata repositories from MySQL to MongoDB.</li>
-            </ul>
-          </div>
+        <dt>Cloud &amp; Infra</dt>
+        <dd>Oracle Cloud Infrastructure, AWS, infrastructure as code, Terraform-style providers, virtual cloud networks, disaster recovery, CI/CD, Linux, Windows Server</dd>
 
-        </section>
-      </main>
-    </div>
-  </div>
+        <dt>Data &amp; Platforms</dt>
+        <dd>Distributed systems, MySQL, MongoDB, Apache Hadoop, Apache Pig, Elasticsearch, Solr, NumPy &amp; SciPy</dd>
+
+        <dt>Practice</dt>
+        <dd>System design, architecture and security review, cross-team technical leadership, mentoring, technical writing and runbooks</dd>
+      </dl>
+    </section>
+
+    <section class="block">
+      <h2>Education</h2>
+
+      <div class="edu-row">
+        <div class="school-line">
+          <h3>University of California, Santa Barbara</h3>
+          <span class="role-when">September 2017 — June 2019</span>
+        </div>
+        <div class="degree">Master of Science, Computer Science — GPA 3.9 / 4.0</div>
+        <div class="coursework">Advanced Topics in Security · Advanced Topics in Cryptography · Cloud Computing · Information Retrieval</div>
+      </div>
+
+      <div class="edu-row">
+        <div class="school-line">
+          <h3>PES Institute of Technology</h3>
+          <span class="role-when">September 2011 — June 2015</span>
+        </div>
+        <div class="degree">Bachelor of Engineering, Information Science &amp; Engineering — GPA 9.25 / 10</div>
+        <div class="coursework">Computer &amp; Network Security · Natural Language Processing · Data Mining</div>
+      </div>
+    </section>
+
+  </main>
 
 </body>
 

@@ -18,7 +18,11 @@
   }
 
   function paintIcon() {
-    if (themeIcon) themeIcon.innerHTML = currentTheme() === "dark" ? SUN : MOON;
+    var dark = currentTheme() === "dark";
+    if (themeIcon) themeIcon.innerHTML = dark ? SUN : MOON;
+    if (themeToggle) {
+      themeToggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+    }
   }
 
   paintIcon();
@@ -76,6 +80,7 @@
 
   /* ---------- Reveal on scroll ---------- */
 
+  root.classList.add("reveal-ready");
   var reveals = document.querySelectorAll(".reveal");
 
   if (!("IntersectionObserver" in window)) {

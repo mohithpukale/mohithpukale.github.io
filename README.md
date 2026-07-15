@@ -1,6 +1,12 @@
-# mohithpukale.github.io
+# mohithpukale.com
 
-Personal portfolio and resume, served by GitHub Pages. Hand-written HTML/CSS/JS — no framework and no build step.
+Personal portfolio and resume. Hand-written HTML/CSS/JS — no framework and no build step.
+
+Served by GitHub Pages from `master`, and reachable at both
+[mohithpukale.com](https://mohithpukale.com) (proxied through Cloudflare) and
+[mohithpukale.github.io](https://mohithpukale.github.io). The custom domain is not configured in the
+GitHub Pages settings — there is deliberately no `CNAME` file — so the apex domain depends on the
+Cloudflare proxy in front of it. `mohithpukale.com` is the canonical URL.
 
 | Path | Purpose |
 | --- | --- |

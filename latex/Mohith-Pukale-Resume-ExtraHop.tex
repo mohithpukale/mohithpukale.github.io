@@ -1,0 +1,173 @@
+%-------------------------
+% Resume in LaTeX — based on "Jake's Resume" (MIT License)
+% https://github.com/jakegut/resume
+% Tailored for ExtraHop: security, networking, distributed systems.
+% Open in Overleaf: New Project -> Upload Project (or Blank Project and paste this file).
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Mohith Pukale} \\ \vspace{1pt}
+    \small Seattle, WA $|$
+    \href{mailto:mohithpukale@gmail.com}{\underline{mohithpukale@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/mohith-pukale}{\underline{linkedin.com/in/mohith-pukale}} $|$
+    \href{https://github.com/mohithpukale}{\underline{github.com/mohithpukale}} $|$
+    \href{https://mohithpukale.com}{\underline{mohithpukale.com}}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Oracle Cloud Infrastructure}{Seattle, WA}
+      {Principal Software Engineer --- Identity \& Access Infrastructure}{Aug 2019 -- Present}
+      \resumeItemListStart
+        \resumeItem{Own identity and authorization infrastructure for \textbf{isolated, sovereign, and dedicated cloud environments}, spanning the internal authorization platform, just-in-time access service, and identity provider federation.}
+        \resumeItem{Broke a cyclic dependency between the authorization platform and a legacy corporate identity provider, enabling \textbf{phishing-resistant hardware login} in place of OTPs; migrated affected users with no loss of access.}
+        \resumeItem{Led \textbf{credential rotation automation} for a security hardening initiative: bootstrapped the rotator service, added service principals, and integrated an \textbf{SSH certificate authority}; rotations take \textbf{under 5 min}.}
+        \resumeItem{Built security-key programming and \textbf{PKI} certificate provisioning for multi-factor workstation login across Windows, Oracle Linux, and secure facilities, letting regional teams issue keys to \textbf{1,000+ users} locally.}
+        \resumeItem{Designed an isolated administrative environment giving support engineers \textbf{scoped, audited access} to dedicated cloud distributions, and drove it through \textbf{architecture and security review boards}.}
+        \resumeItem{Delivered \textbf{disaster recovery and multi-region} administrative login, keeping dedicated regions reachable during a regional failure, with per-region timeouts that adjust dynamically for degraded networks.}
+        \resumeItem{Stood up a Windows Active Directory proof of concept end to end (\textbf{network, jump hosts, gateway}, directory, group-policy login), then designed the production architecture as a reusable deployment blueprint.}
+        \resumeItem{Authored the \textbf{infrastructure-as-code provider} for the authorization service so partner teams declare access resources directly; cut resource-creation time \textbf{$\sim$50\%} for the largest partner team.}
+        \resumeItem{Cut entities under periodic access review from \textbf{$\sim$5,000 to $\sim$200}; added batching to the directory pipeline so a bulk change across \textbf{$\sim$40k accounts} landed incrementally instead of blocking on one long-running thread.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Amazon}{Seattle, WA}
+      {Software Developer --- Consumer Knowledge Platform}{Aug 2015 -- Aug 2017}
+      \resumeItemListStart
+        \resumeItem{Re-architected the platform's core service with a new data model and metrics, giving \textbf{25\% faster} response times.}
+        \resumeItem{Reduced operational load \textbf{15\%} by decomposing a monolithic service into a federated one.}
+        \resumeItem{Implemented automated recovery for \textbf{big-data analytics workflows}, with failure and delay notification.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Amazon}{Seattle, WA}
+      {Software Developer Intern --- Consumer Marketing Analytics}{Jan 2015 -- Jul 2015}
+      \resumeItemListStart
+        \resumeItem{Automated aggregation and publishing of customer scores with Apache Pig and AWS workflow services.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Intuit}{}
+      {Software Developer Intern --- QuickBooks Online}{Jun 2014 -- Aug 2014}
+      \resumeItemListStart
+        \resumeItem{Built a service \textbf{masking sensitive production data} for QA; cut request time \textbf{20\%} (MySQL to MongoDB).}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH-----------
+\section{Research}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Fault-Tolerant Oblivious Data Store} $|$ \emph{UC Santa Barbara, Graduate Student Researcher}}{Jun 2018 -- Aug 2018}
+          \resumeItemListStart
+            \resumeItem{Added \textbf{Oblivious RAM} to fault-tolerant cloud storage, hiding data access patterns from the storage provider.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Santa Barbara}{Santa Barbara, CA}
+      {Master of Science in Computer Science --- GPA 3.9/4.0}{Sep 2017 -- Jun 2019}
+    \resumeSubheading
+      {PES Institute of Technology}{}
+      {Bachelor of Engineering in Information Science \& Engineering --- GPA 9.25/10}{Sep 2011 -- Jun 2015}
+  \resumeSubHeadingListEnd
+  \vspace{1pt}
+  {\small \hspace{0.15in}\textbf{Coursework:} Adv.\ Security, Adv.\ Cryptography, Computer \& Network Security, Cloud Computing}
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Go, Java, Python, C, Bash, SQL, PowerShell} \\
+     \textbf{Security \& Identity}{: OAuth 2.0, SAML, OIDC, LDAP, Active Directory, PKI, FIDO U2F, YubiKey, SSH CA, applied cryptography} \\
+     \textbf{Cloud \& Networking}{: OCI, AWS, virtual cloud networks, Terraform-style IaC, disaster recovery, CI/CD, Linux, Windows Server} \\
+     \textbf{Data \& Systems}{: Distributed systems, Elasticsearch, Solr, MySQL, MongoDB, Apache Hadoop, Apache Pig}
+    }}
+ \end{itemize}
+
+\end{document}

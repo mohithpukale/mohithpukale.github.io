@@ -1,0 +1,111 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+# Resume for ExtraHop, Jake's-Resume style (RenderCV "sb2nov" theme).
+# Build:  pip install "rendercv[full]"  &&  rendercv render Mohith_Pukale_CV_ExtraHop.yaml
+# Output: rendercv_output/Mohith_Pukale_CV.pdf
+cv:
+  name: Mohith Pukale
+  location: Seattle, WA
+  email: mohithpukale@gmail.com
+  website: https://mohithpukale.com/
+  social_networks:
+    - network: LinkedIn
+      username: mohith-pukale
+    - network: GitHub
+      username: mohithpukale
+  sections:
+    experience:
+      - company: Oracle Cloud Infrastructure
+        position: Principal Software Engineer — Identity & Access Infrastructure
+        start_date: 2019-08
+        end_date: present
+        location: Seattle, WA
+        highlights:
+          - Own identity and authorization infrastructure for **isolated, sovereign, and dedicated cloud environments**, spanning the internal authorization platform, just-in-time access service, and identity provider federation.
+          - Broke a cyclic dependency between the authorization platform and a legacy corporate identity provider, enabling **phishing-resistant hardware login** in place of OTPs; migrated affected users with no loss of access.
+          - Led **credential rotation automation** for a security hardening initiative; bootstrapped the rotator service, added service principals, and integrated an **SSH certificate authority**; rotations take **under 5 min**.
+          - Built security-key programming and **PKI** certificate provisioning for multi-factor workstation login across Windows, Oracle Linux, and secure facilities, letting regional teams issue keys to **1,000+ users** locally.
+          - Designed an isolated administrative environment giving support engineers **scoped, audited access** to dedicated cloud distributions, and drove it through **architecture and security review boards**.
+          - Delivered **disaster recovery and multi-region** administrative login, keeping dedicated regions reachable during a regional failure, with per-region timeouts that adjust dynamically for degraded networks.
+          - Stood up a Windows Active Directory proof of concept end to end (**network, jump hosts, gateway**, directory, group-policy login), then designed the production architecture as a reusable deployment blueprint.
+          - Authored the **infrastructure-as-code provider** for the authorization service so partner teams declare access resources directly; cut resource-creation time **~50%** for the largest partner team.
+          - Cut entities under periodic access review from **~5,000 to ~200**; added batching to the directory pipeline so a bulk change across **~40k accounts** landed incrementally instead of blocking on one long-running thread.
+      - company: Amazon
+        position: Software Developer — Consumer Knowledge Platform
+        start_date: 2015-08
+        end_date: 2017-08
+        location: Seattle, WA
+        highlights:
+          - Re-architected the platform's core service with a new data model and metrics, giving **25% faster** response times.
+          - Reduced operational load **15%** by decomposing a monolithic service into a federated one.
+          - Implemented automated recovery for **big-data analytics workflows**, with failure and delay notification.
+      - company: Amazon
+        position: Software Developer Intern — Consumer Marketing Analytics
+        start_date: 2015-01
+        end_date: 2015-07
+        location: Seattle, WA
+        highlights:
+          - Automated aggregation and publishing of customer scores with Apache Pig and AWS workflow services.
+      - company: Intuit
+        position: Software Developer Intern — QuickBooks Online
+        start_date: 2014-06
+        end_date: 2014-08
+        highlights:
+          - Built a service **masking sensitive production data** for QA; cut request time **20%** (MySQL to MongoDB).
+    research:
+      - company: University of California, Santa Barbara
+        position: Graduate Student Researcher — Fault-Tolerant Oblivious Data Store
+        start_date: 2018-06
+        end_date: 2018-08
+        highlights:
+          - Added **Oblivious RAM** to fault-tolerant cloud storage, hiding data access patterns from the storage provider.
+    education:
+      - institution: University of California, Santa Barbara
+        area: Computer Science
+        degree: MS
+        start_date: 2017-09
+        end_date: 2019-06
+        location: Santa Barbara, CA
+        highlights:
+          - 'GPA: 3.9/4.0. Coursework: Adv. Security, Adv. Cryptography, Cloud Computing, Information Retrieval'
+      - institution: PES Institute of Technology
+        area: Information Science & Engineering
+        degree: BE
+        start_date: 2011-09
+        end_date: 2015-06
+        highlights:
+          - 'GPA: 9.25/10. Coursework: Computer & Network Security, Data Mining'
+    technical_skills:
+      - label: Languages
+        details: Go, Java, Python, C, Bash, SQL, PowerShell
+      - label: Security & Identity
+        details: OAuth 2.0, SAML, OIDC, LDAP, Active Directory, PKI, FIDO U2F, YubiKey, SSH CA, cryptography
+      - label: Cloud & Networking
+        details: OCI, AWS, virtual cloud networks, Terraform-style IaC, disaster recovery, CI/CD, Linux, Windows
+      - label: Data & Systems
+        details: Distributed systems, Elasticsearch, Solr, MySQL, MongoDB, Apache Hadoop, Apache Pig
+design:
+  theme: sb2nov
+  page:
+    size: us-letter
+    top_margin: 0.45in
+    bottom_margin: 0.45in
+    left_margin: 0.5in
+    right_margin: 0.5in
+    show_footer: false
+    show_top_note: false
+  typography:
+    line_spacing: 0.5em
+    alignment: left
+  header:
+    space_below_name: 0.4cm
+    space_below_connections: 0.3cm
+  section_titles:
+    space_above: 0.25cm
+    space_below: 0.15cm
+  sections:
+    space_between_regular_entries: 0.5em
+  entries:
+    highlights:
+      bullet: •
+locale:
+  language: english
